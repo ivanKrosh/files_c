@@ -1,0 +1,23 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Сценарії/">
+    <File Path="Сценарії/demo01_kinds.cmd" />
+    <File Path="Сценарії/demo02_open.cmd" />
+    <File Path="Сценарії/demo03_read.cmd" />
+    <File Path="Сценарії/demo04_write.cmd" />
+    <File Path="Сценарії/demo05_filter.cmd" />
+    <File Path="Сценарії/demo06_pitfalls.cmd" />
+  </Folder>
+  <Folder Name="/Файли/">
+    <File Path="Файли/marks.txt" />
+  </Folder>
+  <Project Path="Demo1_kinds/Demo1_kinds.vcxproj" Id="fafe1955-8daf-4be6-9bad-95464fffc996" />
+  <Project Path="Demo2_open/Demo2_open.vcxproj" Id="fb75c424-596b-48ad-ad47-467aac8cd02d" />
+  <Project Path="Demo3_read/Demo3_read.vcxproj" Id="d0243b17-dc47-4e26-957f-985af901913a" />
+  <Project Path="Demo4_write/Demo4_write.vcxproj" Id="5fecc161-7fb1-4ea8-beef-2223b5d7a0d8" />
+  <Project Path="Demo5_filter/Demo5_filter.vcxproj" Id="590f1ec3-7636-4d03-99e5-50340a8ef241" />
+  <Project Path="Demo6_pitfalls/Demo6_pitfalls.vcxproj" Id="beb4858f-c980-4833-975a-d260218a7150" />
+</Solution>
