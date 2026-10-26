@@ -1,12 +1,30 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
+/* друкує всі байти файлу в шістнадцятковому вигляді */
+static void dump(const char *name)
+{
+    FILE *f = fopen(name, "rb");                 /* "rb": байти як є */
+    if (f == NULL) {
+        perror(name);
+        return;
+    }
+    int c, n = 0;
+    printf("%-10s:", name);
+    while ((c = fgetc(f)) != EOF) {              /* наступний байт або EOF */
+        printf(" %02X", c);
+        n++;
+    }
+    printf("  (%d bytes)\n", n);
+    fclose(f);
+}
+
 int main(void)
 {
     int a[3] = { 7, 1000000, -25 };
 
-    FILE *t = fopen("nums.txt", "w");            /* текстовий файл */
-    FILE *b = fopen("nums.bin", "wb");           /* двійковий файл */
+    FILE *t = fopen("text.txt", "w");            /* текстовий файл */
+    FILE *b = fopen("binary.bin", "wb");         /* двійковий файл */
     if (t == NULL || b == NULL) {
         perror("fopen");
         return 1;
@@ -18,6 +36,9 @@ int main(void)
 
     fclose(t);
     fclose(b);
-    printf("nums.txt and nums.bin written\n");
+    printf("text.txt and binary.bin written\n\n");
+
+    dump("text.txt");
+    dump("binary.bin");
     return 0;
 }

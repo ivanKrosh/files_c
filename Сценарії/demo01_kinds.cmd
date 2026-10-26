@@ -10,12 +10,12 @@ if not exist "%BIN%\Demo1_kinds.exe" ( echo [!] Зберіть рішення в
 echo ^> Demo1_kinds.exe
 "%BIN%\Demo1_kinds.exe"
 echo.
-echo ^> dir nums.*
-dir nums.* | findstr nums
+echo   text.txt   - цифри і 0D 0A після кожного числа.
+echo   binary.bin - по 4 байти на число, молодший байт першим.
 pause
 echo.
-echo === Байти обох файлів ===
-powershell -NoProfile -Command "Format-Hex nums.txt; Format-Hex nums.bin"
-echo   nums.txt - цифри і 0D 0A після кожного числа.
-echo   nums.bin - по 4 байти на число, молодший байт першим.
+echo === Обидва файли в Блокноті ===
+start notepad text.txt
+start notepad binary.bin
+echo   text.txt - три рядки з числами; binary.bin - незрозумілі символи.
 pause
